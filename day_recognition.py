@@ -17,22 +17,8 @@ months = ["January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"]
 
 for i in range(12):
-    print(months[i])
-
-#if day <= 31:
-#    print("January " + str(day))
-#elif day <= 31 + 28:
-#    print("February " + str(day - 31))
-#elif day <= 31 + 28 + 31:
-#    print("March " + str(day - 31 - 28))
-#elif day <= 31 + 28 + 31 + 30:
-#    print("April " + str(day - 31 - 28 - 31))
-#elif day <= 31 + 28 + 31 + 30 + 31:
-#    print("May " + str(day - 31 - 28 - 31 - 30))
-#elif day <= 31 + 28 + 31 + 30 + 31 + 30:
-#    print("June " + str(day - 31 - 28 - 31 - 30 - 31))
-#elif day <= 31 + 28 + 31 + 30 + 31 + 30 + 31:
-#    print("July " + str(day - 31 - 28 - 31 - 30 - 31 - 30))
-#elif day <= 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31:
-#    print("August " + str(day - 31 - 28 - 31 - 30 - 31 - 30 - 31 - 31))
-
+    if day > day_months[i]:
+        day = day - day_months[i]
+    else:
+        print(months[i] + " " + str(day))
+        break

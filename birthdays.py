@@ -8,12 +8,15 @@ Created on Sat Oct 22 10:00:41 2022
 
 import random
 
+num_people = 41
+num_cases = 10000
+
 success = 0
-for case in range(100000):
+for case in range(num_cases):
     arr = []
-    for i in range(23):
+    for i in range(num_people):
         arr.append(random.randint(1,365))
-    if len(set(arr)) < 23:
+    if len(set(arr)) < num_people:
         success = success + 1
 
-print("Probability is " + str(success / 100000))
+print("Probability is " + str(success / num_cases))
